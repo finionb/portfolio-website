@@ -1,0 +1,38 @@
+/* Project detail page */
+.back-link {
+  display: inline-block;
+  margin-bottom: clamp(1rem, 2vw, 2rem);
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  font-size: clamp(0.7rem, 0.4vw + 0.4rem, 0.85rem);
+}
+
+.back-link:hover {
+  color: #4f4f4f;
+}
+
+.project-detail-title {
+  margin: 0.4rem 0 clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.1rem, 1vw + 0.6rem, 1.6rem);
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.project-detail-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-detail-text {
+  margin-top: clamp(1rem, 2vw, 2rem);
+  max-width: 700px;
+  color: #4f4f4f;
+  font-size: clamp(1rem, 0.8vw + 0.7rem, 1.25rem);
+  line-height: 1.7;
+}
+

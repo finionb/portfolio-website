@@ -246,6 +246,13 @@
 })();
 
 (function () {
+  document.querySelectorAll(".coming-soon-card").forEach((card) => {
+    card.style.cursor = "default";
+    card.addEventListener("click", (e) => e.preventDefault());
+  });
+})();
+
+(function () {
   const burger = document.querySelector(".nav-burger");
   const navLinks = document.querySelector(".nav-links");
   if (burger && navLinks) {
