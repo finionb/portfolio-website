@@ -154,7 +154,11 @@
 
   /* ─ Footer ─ */
   .footer {
-    padding: clamp(3rem, 8vw, 5rem) 1.25rem;
+    padding: clamp(2rem, 6vw, 3rem) 1.25rem;
+  }
+
+  .footer-cta {
+    font-size: 3rem;
   }
 
   .footer-links-row {
