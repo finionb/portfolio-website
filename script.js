@@ -287,6 +287,52 @@
 })();
 
 (function () {
+  const footer = document.querySelector(".footer");
+  const inner = footer ? footer.querySelector(".footer-inner") : null;
+  if (!inner) return;
+
+  function setBodyPadding() {
+    document.body.style.paddingBottom = footer.offsetHeight + "px";
+  }
+
+  let showTimer = null;
+
+  function update() {
+    const footerH = footer.offsetHeight;
+    const scrollY = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const revealStart = maxScroll - footerH;
+    const progress = footerH > 0
+      ? Math.max(0, Math.min(1, (scrollY - revealStart) / footerH))
+      : 1;
+
+    const shouldShow = progress >= 0.85;
+    if (shouldShow && !inner.classList.contains("is-visible")) {
+      if (!showTimer) {
+        showTimer = setTimeout(() => {
+          inner.classList.add("is-visible");
+          showTimer = null;
+        }, 180);
+      }
+    } else if (!shouldShow) {
+      clearTimeout(showTimer);
+      showTimer = null;
+      inner.classList.remove("is-visible");
+    }
+  }
+
+  function onResize() {
+    setBodyPadding();
+    update();
+  }
+
+  setBodyPadding();
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", onResize, { passive: true });
+  update();
+})();
+
+(function () {
   const images = document.querySelectorAll(".slideshow-image");
   if (images.length < 2) return;
 

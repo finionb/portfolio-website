@@ -78,8 +78,9 @@
     gap: 2rem;
   }
 
-  .about-skills ul {
-    min-width: unset;
+  /* ─ Projektkarten ─ */
+  .project-desc {
+    line-height: 1.4;
   }
 
   /* ─ Projektdetails ─ */
@@ -110,7 +111,7 @@
 
   /* ─ Navbar ─ */
   .nav-logo {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 
   .navbar {
@@ -153,13 +154,12 @@
 
   /* ─ Footer ─ */
   .footer {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding: clamp(3rem, 8vw, 5rem) 1.25rem;
   }
 
-  .footer-bottom {
+  .footer-links-row {
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 1rem;
   }
 
   /* ─ Projektdetails ─ */
