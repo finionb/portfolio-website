@@ -483,6 +483,10 @@ h2 {
   opacity: 1;
 }
 
+.footer-br {
+  display: none;
+}
+
 .footer-cta {
   font-size: clamp(2rem, 3.5vw + 1rem, 5rem);
   font-weight: 700;

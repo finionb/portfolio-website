@@ -154,11 +154,11 @@
 
   /* ─ Footer ─ */
   .footer {
-    padding: clamp(2rem, 6vw, 3rem) 1.25rem;
+    padding: clamp(4rem, 10vw, 6rem) 1.25rem;
   }
 
-  .footer-cta {
-    font-size: 3rem;
+  .footer-br {
+    display: inline;
   }
 
   .footer-links-row {
