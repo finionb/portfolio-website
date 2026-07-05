@@ -41,13 +41,14 @@
       const viewportRect = viewport.getBoundingClientRect();
 
       const remPx = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
-      const gutter = remPx * 2;
+      const gutterRem = window.innerWidth <= 480 ? 1.25 : 2;
+      const gutter = remPx * gutterRem;
       const docWidth = window.innerWidth;
 
       const lineLeft = headingText
         ? headingText.getBoundingClientRect().left
         : gutter;
-      const lineRight = docWidth - gutter;
+      const lineRight = docWidth - lineLeft;
 
       const startOffset = lineLeft - viewportRect.left;
 
