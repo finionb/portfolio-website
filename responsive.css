@@ -84,8 +84,8 @@
   }
 
   /* ─ Projektdetails ─ */
-  .project-header {
-    padding-top: clamp(5rem, 8vw, 7rem);
+  .project-hero-image {
+    padding-top: clamp(4rem, 8vw, 6rem);
   }
 
   .project-meta {
@@ -166,7 +166,7 @@
     gap: 1rem;
   }
 
-  /* ─ Projektdetails ─ */
+
   .project-image-grid {
     grid-template-columns: 1fr;
     gap: 0.75rem;

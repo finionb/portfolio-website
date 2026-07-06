@@ -1,38 +1,260 @@
-/* Project detail page */
-.back-link {
-  display: inline-block;
-  margin-bottom: clamp(1rem, 2vw, 2rem);
-  color: #000000;
-  text-decoration: none;
-  letter-spacing: 0.05em;
-  font-size: clamp(0.7rem, 0.4vw + 0.4rem, 0.85rem);
-}
+/* ═══════════════════════════════════════════════
+   PROJECT DETAIL PAGES
+═══════════════════════════════════════════════ */
 
-.back-link:hover {
-  color: #4f4f4f;
-}
+/* ── Intro padding (replaces separate header) ── */
 
-.project-detail-title {
-  margin: 0.4rem 0 clamp(1rem, 2vw, 2rem);
-  font-size: clamp(1.1rem, 1vw + 0.6rem, 1.6rem);
-  font-weight: 700;
-  line-height: 1;
+.project-tags {
+  font-size: clamp(0.65rem, 0.3vw + 0.4rem, 0.78rem);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: #4f4f4f;
+  margin-bottom: 0;
 }
 
-.project-detail-image img {
+.project-title {
+  font-size: clamp(2rem, 3.5vw + 1rem, 5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: #000;
+  margin-top: calc(-1 * clamp(0.8rem, 1.5vw, 1.2rem));
+}
+
+/* ── Hero Image ──────────────────────────────── */
+.project-hero-image {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-top: clamp(5rem, 9vw, 8rem);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  overflow: hidden;
+}
+
+.project-hero-image img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 8;
+  aspect-ratio: 21 / 9;
   object-fit: cover;
   object-position: center;
 }
 
-.project-detail-text {
-  margin-top: clamp(1rem, 2vw, 2rem);
-  max-width: 700px;
-  color: #4f4f4f;
-  font-size: clamp(1rem, 0.8vw + 0.7rem, 1.25rem);
-  line-height: 1.7;
+/* ── Intro: text + meta ──────────────────────── */
+.project-intro {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  max-width: none;
+  padding: clamp(1rem, 1.4vw, 1.5rem) 2rem;
 }
 
+.project-intro-inner {
+  display: grid;
+  grid-template-columns: 1fr clamp(10rem, 22vw, 20rem);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.project-intro-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(1.2rem, 2vw, 2rem);
+  text-align: left;
+  width: 70%;
+}
+
+.project-description {
+  font-size: clamp(0.95rem, 0.8vw + 0.6rem, 1.2rem);
+  line-height: 1.7;
+  color: #4f4f4f;
+}
+
+.project-intro-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-meta-list {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  text-align: left;
+}
+
+.project-meta-label {
+  font-size: clamp(0.6rem, 0.25vw + 0.38rem, 0.7rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4f4f4f;
+  margin-bottom: 0.35rem;
+}
+
+.project-meta-value {
+  font-size: clamp(0.82rem, 0.4vw + 0.55rem, 0.95rem);
+  line-height: 1.6;
+  color: #4f4f4f;
+}
+
+/* ── Magazine Image Grid ─────────────────────── */
+.project-gallery {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  max-width: none;
+  padding: 0 2rem;
+  margin-bottom: clamp(5rem, 8vw, 8rem);
+}
+
+.project-gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 1.4vw, 1.5rem);
+}
+
+.project-img-wide img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.project-img-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 1.4vw, 1.5rem);
+}
+
+.project-img-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Project Navigation ──────────────────────── */
+.project-nav {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  max-width: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 2rem;
+  padding-bottom: clamp(4rem, 4vw, 6rem);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 2rem;
+}
+
+.project-nav-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 45%;
+}
+
+.project-nav-link--next {
+  text-align: right;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.project-nav-dir {
+  font-size: clamp(0.6rem, 0.25vw + 0.38rem, 0.7rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4f4f4f;
+}
+
+.project-nav-name {
+  font-size: clamp(1.1rem, 2vw + 0.3rem, 2.2rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.project-nav-link:hover .project-nav-name { color: #4f4f4f; }
+
+.project-nav::before {
+  left: 2rem;
+  right: 2rem;
+}
+
+/* ── Responsive ──────────────────────────────── */
+
+/* Tablet: Bild bleibt sichtbar, Text-Breite voll */
+@media (max-width: 1024px) {
+  .project-intro-left {
+    width: 100%;
+  }
+}
+
+/* Mobile: 1 Spalte, Bild ausblenden */
+@media (max-width: 600px) {
+  .project-intro-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .project-intro-image {
+    display: none;
+  }
+
+  .project-meta-list {
+    flex-wrap: wrap;
+    gap: clamp(1.5rem, 3vw, 2rem);
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .project-title {
+    font-size: clamp(2.2rem, 13vw, 3.5rem);
+  }
+
+  .project-hero-image,
+  .project-gallery {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .project-hero-image img {
+    aspect-ratio: 5 / 3;
+  }
+
+  .project-intro {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .project-nav {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .project-nav::before {
+    left: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .project-img-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .project-img-portrait img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .project-nav-link {
+    max-width: 48%;
+  }
+}

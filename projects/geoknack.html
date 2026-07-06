@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ececec" />
     <title>GeoKnack – Portfolio</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../responsive.css" />
@@ -21,43 +22,94 @@
           <span></span>
         </button>
         <ul class="nav-links">
-          <li><a href="../index.html#about">Über mich</a></li>
           <li><a href="../index.html#projects">Projekte</a></li>
+          <li><a href="../index.html#gallery">Galerie</a></li>
+          <li><a href="../index.html#about">Über mich</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="section project-detail">
-        <a class="back-link" href="../index.html#projects">&larr; Zurück zu den Projekten</a>
 
-        <p class="project-tags">UI/UX DESIGN, APP</p>
-        <h1 class="project-detail-title">GeoKnack</h1>
+      <!-- Hero Image -->
+      <div class="project-hero-image">
+        <img src="../images/MockUp_GeoKnack.png" alt="GeoKnack App Mockup" />
+      </div>
 
-        <div class="project-detail-image">
-          <img src="../images/GeoKnack_App.png" alt="GeoKnack" />
+      <!-- Header + Description + Meta -->
+      <section class="section no-line project-intro">
+        <div class="project-intro-inner">
+          <div class="project-intro-left">
+            <p class="project-tags">UI/UX Design &nbsp;·&nbsp; App &nbsp;·&nbsp; 2023</p>
+            <h1 class="project-title">GeoKnack</h1>
+            <p class="project-description">
+              GeoKnack entstand im Rahmen eines Hochschulprojekts, bei dem wir eine iOS-App von der ersten Idee bis zur fertigen Umsetzung entwickelt haben. Das Konzept orientiert sich am Spielprinzip von GeoGuessr und wurde gemeinsam im Team konzipiert, gestaltet und entwickelt. Ich war für das erste UI-Konzept und den Userflow verantwortlich, die anschließend gemeinsam weiter ausgearbeitet wurden.
+            </p>
+            <div class="project-meta-list">
+              <div class="project-meta-item">
+                <p class="project-meta-label">Rolle</p>
+                <p class="project-meta-value">UI Konzept<br>User Flow<br>Frontend, Login</p>
+              </div>
+              <div class="project-meta-item">
+                <p class="project-meta-label">Tools</p>
+                <p class="project-meta-value">Figma<br>Xcode, Swift</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-intro-image">
+            <img src="../images/MockUp_GeoKnack.png" alt="GeoKnack App" />
+          </div>
         </div>
-
-        <p class="project-detail-text">Hier steht eine ausführlichere Beschreibung des Projekts "GeoKnack".</p>
       </section>
+
+      <!-- Magazine Image Grid -->
+      <section class="section no-line project-gallery">
+        <div class="project-gallery-grid">
+          <div class="project-img-wide">
+            <img src="../images/MockUp_GeoKnack.png" alt="GeoKnack App Screens" />
+          </div>
+          <div class="project-img-pair">
+            <div class="project-img-portrait">
+              <img src="../images/MockUp_GeoKnack.png" alt="GeoKnack Detail" />
+            </div>
+            <div class="project-img-portrait">
+              <img src="../images/MockUp_GeoKnack.png" alt="GeoKnack Detail" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Navigation -->
+      <nav class="section project-nav">
+        <a class="project-nav-link" href="bachelorarbeit.html">
+          <span class="project-nav-dir">← Vorheriges Projekt</span>
+          <span class="project-nav-name">Dark Patterns</span>
+        </a>
+        <a class="project-nav-link project-nav-link--next" href="social-media-handball.html">
+          <span class="project-nav-dir">Nächstes Projekt →</span>
+          <span class="project-nav-name">TSG Handball</span>
+        </a>
+      </nav>
+
     </main>
 
   </div>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <p class="footer-cta">Lets work<br class="footer-br"> together</p>
-        <div class="footer-links-row">
-          <a class="footer-link" href="mailto:finjabormann03@gmail.com">finjabormann03@gmail.com</a>
-          <div class="footer-social">
-            <a class="footer-link" href="https://de.linkedin.com/in/finja-bormann-8b305a2b4" target="_blank">LinkedIn</a>
-            <a class="footer-link" href="https://github.com/finionb" target="_blank">GitHub</a>
-          </div>
-        </div>
-        <p class="footer-copy">&copy; 2026 Finja Bormann</p>
-      </div>
-    </footer>
 
-    <script src="../script.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-cta">Lets work<br class="footer-br"> together</p>
+      <div class="footer-links-row">
+        <a class="footer-link" href="mailto:finjabormann03@gmail.com">finjabormann03@gmail.com</a>
+        <div class="footer-social">
+          <a class="footer-link" href="https://de.linkedin.com/in/finja-bormann-8b305a2b4" target="_blank">LinkedIn</a>
+          <a class="footer-link" href="https://github.com/finionb" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Finja Bormann</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
   </body>
 </html>

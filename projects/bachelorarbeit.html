@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bachelorarbeit – Portfolio</title>
+    <meta name="theme-color" content="#ececec" />
+    <title>Dark Patterns – Portfolio</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../responsive.css" />
     <link rel="stylesheet" href="projects.css" />
@@ -11,7 +12,6 @@
   <body>
   <div class="page-wrapper">
 
-    <!-- Navigation -->
     <header>
       <nav class="navbar">
         <a href="../index.html" class="nav-logo">FINJA BORMANN</a>
@@ -21,43 +21,91 @@
           <span></span>
         </button>
         <ul class="nav-links">
-          <li><a href="../index.html#about">Über mich</a></li>
           <li><a href="../index.html#projects">Projekte</a></li>
+          <li><a href="../index.html#gallery">Galerie</a></li>
+          <li><a href="../index.html#about">Über mich</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="section project-detail">
-        <a class="back-link" href="../index.html#projects">&larr; Zurück</a>
 
-        <p class="project-tags">RESEARCH, DESIGN</p>
-        <h1 class="project-detail-title">Bachelorarbeit</h1>
+      <div class="project-hero-image">
+        <img src="../images/Bachelorarbeit_MockUp.png" alt="Dark Patterns Bachelorarbeit Mockup" />
+      </div>
 
-        <div class="project-detail-image">
-          <img src="../images/Bachelorarbeit_MockUp.png" alt="Bachelorarbeit" />
+      <section class="section no-line project-intro">
+        <div class="project-intro-inner">
+          <div class="project-intro-left">
+            <p class="project-tags">Research &nbsp;·&nbsp; UI/UX Design &nbsp;·&nbsp; Website</p>
+            <h1 class="project-title">Dark Patterns</h1>
+            <p class="project-description">
+              Meine Bachelorarbeit im Bereich Medieninformatik beschäftigt sich mit Dark Patterns im UI/UX Design.
+              Im Rahmen der Arbeit habe ich verschiedene manipulative Designmuster untersucht, kategorisiert und deren Auswirkungen auf das Nutzerverhalten analysiert.
+              Die Ergebnisse wurden in einer begleitenden Website visuell aufbereitet.
+            </p>
+            <div class="project-meta-list">
+              <div class="project-meta-item">
+                <p class="project-meta-label">Rolle</p>
+                <p class="project-meta-value">Research<br>UI/UX Design<br>Frontend</p>
+              </div>
+              <div class="project-meta-item">
+                <p class="project-meta-label">Tools</p>
+                <p class="project-meta-value">Figma<br>HTML, CSS, JS</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-intro-image">
+            <img src="../images/Bachelorarbeit_MockUp.png" alt="Dark Patterns" />
+          </div>
         </div>
-
-        <p class="project-detail-text">Hier steht eine ausführlichere Beschreibung der Bachelorarbeit.</p>
       </section>
+
+      <section class="section no-line project-gallery">
+        <div class="project-gallery-grid">
+          <div class="project-img-wide">
+            <img src="../images/Bachelorarbeit_MockUp.png" alt="Dark Patterns Screens" />
+          </div>
+          <div class="project-img-pair">
+            <div class="project-img-portrait">
+              <img src="../images/Bachelorarbeit_MockUp.png" alt="Dark Patterns Detail" />
+            </div>
+            <div class="project-img-portrait">
+              <img src="../images/Bachelorarbeit_MockUp.png" alt="Dark Patterns Detail" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="section project-nav">
+        <a class="project-nav-link" href="handball-app.html">
+          <span class="project-nav-dir">← Vorheriges Projekt</span>
+          <span class="project-nav-name">TSG Hatten-Sandkrug</span>
+        </a>
+        <a class="project-nav-link project-nav-link--next" href="geoknack.html">
+          <span class="project-nav-dir">Nächstes Projekt →</span>
+          <span class="project-nav-name">GeoKnack</span>
+        </a>
+      </nav>
+
     </main>
 
   </div>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <p class="footer-cta">Lets work<br class="footer-br"> together</p>
-        <div class="footer-links-row">
-          <a class="footer-link" href="mailto:finjabormann03@gmail.com">finjabormann03@gmail.com</a>
-          <div class="footer-social">
-            <a class="footer-link" href="https://de.linkedin.com/in/finja-bormann-8b305a2b4" target="_blank">LinkedIn</a>
-            <a class="footer-link" href="https://github.com/finionb" target="_blank">GitHub</a>
-          </div>
-        </div>
-        <p class="footer-copy">&copy; 2026 Finja Bormann</p>
-      </div>
-    </footer>
 
-    <script src="../script.js"></script>
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-cta">Lets work<br class="footer-br"> together</p>
+      <div class="footer-links-row">
+        <a class="footer-link" href="mailto:finjabormann03@gmail.com">finjabormann03@gmail.com</a>
+        <div class="footer-social">
+          <a class="footer-link" href="https://de.linkedin.com/in/finja-bormann-8b305a2b4" target="_blank">LinkedIn</a>
+          <a class="footer-link" href="https://github.com/finionb" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Finja Bormann</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
   </body>
 </html>

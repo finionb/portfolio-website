@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ececec" />
     <title>Pia's Adventures – Portfolio</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../responsive.css" />
@@ -11,7 +12,6 @@
   <body>
   <div class="page-wrapper">
 
-    <!-- Navigation -->
     <header>
       <nav class="navbar">
         <a href="../index.html" class="nav-logo">FINJA BORMANN</a>
@@ -21,49 +21,91 @@
           <span></span>
         </button>
         <ul class="nav-links">
-          <li><a href="../index.html#about">Über mich</a></li>
           <li><a href="../index.html#projects">Projekte</a></li>
+          <li><a href="../index.html#gallery">Galerie</a></li>
+          <li><a href="../index.html#about">Über mich</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="section project-detail">
-        <a class="back-link" href="../index.html#projects">&larr; Zurück</a>
 
-        <p class="project-tags">UX DESIGN, APP</p>
-        <h1 class="project-detail-title">Pia's Adventures</h1>
+      <div class="project-hero-image">
+        <img src="../images/Pias_adventures_MockUp.png" alt="Pia's Adventures Mockup" />
+      </div>
 
-        <div class="project-detail-image">
-          <img src="../images/Pias_adventures_MockUp.png" alt="Pia's Adventures" />
+      <section class="section no-line project-intro">
+        <div class="project-intro-inner">
+          <div class="project-intro-left">
+            <p class="project-tags">UI/UX Design &nbsp;·&nbsp; Website &nbsp;·&nbsp; 2024</p>
+            <h1 class="project-title">Pia's Adventures</h1>
+            <p class="project-description">
+              Für „Pia's Adventures", eine Plattform für Reise-Blogbeiträge, habe ich die Landingpage neu gestaltet und weiterentwickelt.
+              Ziel war es, eine klare visuelle Identität zu schaffen und die Inhalte nutzerfreundlich und einladend zu präsentieren.
+              In engem Austausch mit der Auftraggeberin habe ich das bestehende Konzept überarbeitet, das Branding geschärft sowie die Landingpage gestalterisch und im Code angepasst.
+            </p>
+            <div class="project-meta-list">
+              <div class="project-meta-item">
+                <p class="project-meta-label">Rolle</p>
+                <p class="project-meta-value">Konzept<br>UI/UX Design<br>Visual Branding<br>Frontend</p>
+              </div>
+              <div class="project-meta-item">
+                <p class="project-meta-label">Tools</p>
+                <p class="project-meta-value">Figma<br>Canva</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-intro-image">
+            <img src="../images/Pias_adventures_MockUp.png" alt="Pia's Adventures" />
+          </div>
         </div>
-
-        <p class="project-detail-text">Für „Pia’s Adventures“, eine Plattform für Reise-Blogbeiträge, habe ich die Landingpage neu gestaltet und weiterentwickelt. 
-        Ziel war es, eine klare visuelle Identität zu schaffen und die Inhalte nutzerfreundlich und einladend zu präsentieren.
-        In engem Austausch mit der Auftraggeberin habe ich das bestehende Konzept überarbeitet, das Branding geschärft sowie die Landingpage gestalterisch und im Code angepasst. 
-        Die technische Umsetzung erfolgt in Zusammenarbeit mit einem Entwickler, der das Gesamtsystem sowie das Grunddesign entwickelt und programmiert hat.
-        Aktuell befindet sich die Landingpage noch in der finalen Optimierung, während die restliche Website weiter ausgebaut wird.</p>
-        <p>Rolle: Konzeptweiterentwicklung, UI/UX Design, Visual Branding, Frontend-Anpassung</p>
-        <p>Tools: Figma, Canva</p>
       </section>
+
+      <section class="section no-line project-gallery">
+        <div class="project-gallery-grid">
+          <div class="project-img-wide">
+            <img src="../images/Pias_adventures_MockUp.png" alt="Pia's Adventures Screens" />
+          </div>
+          <div class="project-img-pair">
+            <div class="project-img-portrait">
+              <img src="../images/Pias_adventures_MockUp.png" alt="Pia's Adventures Detail" />
+            </div>
+            <div class="project-img-portrait">
+              <img src="../images/Pias_adventures_MockUp.png" alt="Pia's Adventures Detail" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="section project-nav">
+        <a class="project-nav-link" href="social-media-handball.html">
+          <span class="project-nav-dir">← Vorheriges Projekt</span>
+          <span class="project-nav-name">TSG Handball</span>
+        </a>
+        <a class="project-nav-link project-nav-link--next" href="handball-app.html">
+          <span class="project-nav-dir">Nächstes Projekt →</span>
+          <span class="project-nav-name">TSG Hatten-Sandkrug</span>
+        </a>
+      </nav>
+
     </main>
 
   </div>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <p class="footer-cta">Lets work<br class="footer-br"> together</p>
-        <div class="footer-links-row">
-          <a class="footer-link" href="mailto:finjabormann03@gmail.com">finjabormann03@gmail.com</a>
-          <div class="footer-social">
-            <a class="footer-link" href="https://de.linkedin.com/in/finja-bormann-8b305a2b4" target="_blank">LinkedIn</a>
-            <a class="footer-link" href="https://github.com/finionb" target="_blank">GitHub</a>
-          </div>
-        </div>
-        <p class="footer-copy">&copy; 2026 Finja Bormann</p>
-      </div>
-    </footer>
 
-    <script src="../script.js"></script>
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-cta">Lets work<br class="footer-br"> together</p>
+      <div class="footer-links-row">
+        <a class="footer-link" href="mailto:finjabormann03@gmail.com">finjabormann03@gmail.com</a>
+        <div class="footer-social">
+          <a class="footer-link" href="https://de.linkedin.com/in/finja-bormann-8b305a2b4" target="_blank">LinkedIn</a>
+          <a class="footer-link" href="https://github.com/finionb" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Finja Bormann</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
   </body>
 </html>
