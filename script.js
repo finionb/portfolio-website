@@ -240,6 +240,15 @@
       }, 150);
     });
 
+    cards.forEach((card) => {
+      Array.from(card.querySelectorAll("img")).forEach((img) => {
+        if (!img.complete) {
+          img.addEventListener("load", measure, { once: true });
+          img.addEventListener("error", measure, { once: true });
+        }
+      });
+    });
+
     measure();
   }
 
