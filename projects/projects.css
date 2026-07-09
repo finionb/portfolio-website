@@ -50,7 +50,7 @@
 
 .project-intro-inner {
   display: grid;
-  grid-template-columns: 1fr clamp(10rem, 22vw, 20rem);
+  grid-template-columns: 7fr 3fr;
   gap: 2rem;
   align-items: center;
   justify-items: center;
@@ -62,7 +62,7 @@
   align-items: flex-start;
   gap: clamp(1.2rem, 2vw, 2rem);
   text-align: left;
-  width: 70%;
+  width: 80%;
 }
 
 .project-description {
@@ -71,7 +71,8 @@
   color: #4f4f4f;
 }
 
-.project-intro-image img {
+.project-intro-image img,
+.project-intro-image video {
   display: block;
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -81,23 +82,24 @@
 
 .project-meta-list {
   display: flex;
-  flex-direction: row;
-  gap: clamp(2.5rem, 5vw, 5rem);
+  flex-direction: column;
+  gap: 0.25rem;
   text-align: left;
+  margin-top: calc(-1 * clamp(0.7rem, 1.2vw, 1.2rem));
+}
+
+.project-meta-item {
+  font-size: clamp(0.78rem, 0.35vw + 0.5rem, 0.9rem);
+  line-height: 1.5;
+  color: #4f4f4f;
 }
 
 .project-meta-label {
   font-size: clamp(0.6rem, 0.25vw + 0.38rem, 0.7rem);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #4f4f4f;
-  margin-bottom: 0.35rem;
-}
-
-.project-meta-value {
-  font-size: clamp(0.82rem, 0.4vw + 0.55rem, 0.95rem);
-  line-height: 1.6;
-  color: #4f4f4f;
+  color: #888;
+  margin-right: 0.5em;
 }
 
 /* ── Magazine Image Grid ─────────────────────── */
@@ -118,9 +120,9 @@
 .project-img-wide img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 7;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
 }
 
 .project-img-pair {
@@ -203,10 +205,6 @@
 @media (max-width: 600px) {
   .project-intro-inner {
     grid-template-columns: 1fr;
-  }
-
-  .project-intro-image {
-    display: none;
   }
 
   .project-meta-list {
