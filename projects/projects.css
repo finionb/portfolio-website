@@ -35,7 +35,7 @@
 .project-hero-image img {
   display: block;
   width: 100%;
-  aspect-ratio: 21 / 9;
+  height: clamp(300px, 45vw, 700px);
   object-fit: cover;
   object-position: center;
 }
@@ -69,6 +69,13 @@
   font-size: clamp(0.95rem, 0.8vw + 0.6rem, 1.2rem);
   line-height: 1.7;
   color: #4f4f4f;
+}
+
+.project-intro-image {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
 }
 
 .project-intro-image img,
@@ -139,9 +146,7 @@
   width: 100vw;
   margin-left: calc(50% - 50vw);
   max-width: none;
-  background: #9ca08a;
-  padding-top: clamp(4rem, 8vw, 8rem);
-  padding-bottom: clamp(4rem, 8vw, 8rem);
+  padding-bottom: clamp(2rem, 3vw, 3rem);
   padding-left: 0;
   padding-right: 0;
 }
@@ -156,12 +161,18 @@
 
 .project-color-card {
   flex: none;
-  height: clamp(280px, 38vh, 480px);
   min-width: 80px;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.project-color-card img {
+.project-color-img {
+  height: clamp(380px, 55vh, 650px);
+}
+
+.project-color-img img {
   display: block;
   height: 100%;
   width: auto;
@@ -169,27 +180,21 @@
   pointer-events: none;
 }
 
-/* ── Magazine Image Grid ─────────────────────── */
-.project-gallery {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  max-width: none;
-  padding: 0 2rem;
-
+.project-color-caption-tag {
+  font-size: clamp(0.7rem, 0.4vw + 0.4rem, 0.85rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  line-height: 1;
 }
 
-.project-gallery-grid {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1rem, 1.4vw, 1.5rem);
-}
-
-.project-img-wide img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 7;
-  object-fit: cover;
-  object-position: center;
+.project-color-caption-name {
+  font-size: clamp(1.1rem, 1vw + 0.6rem, 1.6rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-top: 0.3rem;
+  color: #000;
 }
 
 /* ── Project Navigation ──────────────────────── */
@@ -280,13 +285,13 @@
     padding: 0.4em 0.85em;
   }
 
-  .project-color-card {
-    height: clamp(220px, 35vh, 420px);
+  .project-color-img {
+    height: clamp(260px, 40vh, 480px);
   }
 
   .project-color-gallery {
-    padding-top: clamp(2.5rem, 5vw, 4rem);
-    padding-bottom: clamp(2.5rem, 5vw, 4rem);
+    padding-top: clamp(4rem, 8vw, 6rem);
+    padding-bottom: 1.5rem;
   }
 
   .project-nav {
@@ -301,13 +306,13 @@
     gap: 1.25rem;
   }
 
-  .project-color-card {
-    height: clamp(190px, 30vh, 280px);
+  .project-color-img {
+    height: clamp(200px, 30vh, 320px);
   }
 
   .project-color-gallery {
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
 
   .project-hero-image,
@@ -317,7 +322,7 @@
   }
 
   .project-hero-image img {
-    aspect-ratio: 5 / 3;
+    height: clamp(200px, 55vw, 400px);
   }
 
   .project-intro {
