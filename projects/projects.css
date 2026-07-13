@@ -2,8 +2,6 @@
    PROJECT DETAIL PAGES
 ═══════════════════════════════════════════════ */
 
-/* ── Intro padding (replaces separate header) ── */
-
 .project-tags {
   font-size: clamp(0.65rem, 0.3vw + 0.4rem, 0.78rem);
   letter-spacing: 0.1em;
@@ -26,16 +24,16 @@
 .project-hero-image {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding-top: clamp(5rem, 9vw, 8rem);
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-top: clamp(4rem, 9vw, 8rem);
+  padding-left: clamp(1.25rem, 2.5vw, 2rem);
+  padding-right: clamp(1.25rem, 2.5vw, 2rem);
   overflow: hidden;
 }
 
 .project-hero-image img {
   display: block;
   width: 100%;
-  height: clamp(300px, 45vw, 700px);
+  height: clamp(200px, 40vw, 700px);
   object-fit: cover;
   object-position: center;
 }
@@ -45,13 +43,13 @@
   width: 100vw;
   margin-left: calc(50% - 50vw);
   max-width: none;
-  padding: clamp(1rem, 1.4vw, 1.5rem) 2rem;
+  padding: clamp(1rem, 1.4vw, 1.5rem) clamp(1.25rem, 2.5vw, 2rem);
 }
 
 .project-intro-inner {
   display: grid;
   grid-template-columns: 7fr 3fr;
-  gap: 2rem;
+  gap: clamp(1.5rem, 3vw, 2rem);
   align-items: center;
   justify-items: center;
 }
@@ -85,6 +83,7 @@
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center;
+  cursor: zoom-in;
 }
 
 .project-meta-list {
@@ -123,7 +122,7 @@
   background: transparent;
   color: #000;
   text-decoration: none;
-  font-size: clamp(0.78rem, 0.35vw + 0.5rem, 0.9rem);
+  font-size: clamp(0.7rem, 0.35vw + 0.5rem, 0.9rem);
   letter-spacing: 0;
   transition: color 0.2s ease, border-color 0.2s ease;
   text-transform: uppercase;
@@ -141,46 +140,57 @@
   align-items: center;
 }
 
-/* ── Color Background Swipe Gallery ─────────── */
-.project-color-gallery {
+/* ── Swipe Gallery ───────────────────────────── */
+.project-gallery {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   max-width: none;
-  padding-bottom: clamp(2rem, 3vw, 3rem);
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
 }
 
-.project-color-gallery .projects-viewport {
+.project-gallery > .heading-text {
+  position: absolute;
+  left: clamp(1.25rem, 2.5vw, 2rem);
+  top: 0;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+  pointer-events: none;
+  font-size: 0;
+}
+
+.project-gallery .projects-viewport {
   margin-top: 0;
 }
 
-.project-color-gallery .projects-grid {
-  gap: 2rem;
+.project-gallery .projects-grid {
+  gap: clamp(1.25rem, 2.5vw, 2rem);
 }
 
-.project-color-card {
+.project-card {
   flex: none;
-  min-width: 80px;
+  width: clamp(500px, 35vw, 600px);
   user-select: none;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: clamp(0.5rem, 1vw, 0.7rem);
 }
 
-.project-color-img {
-  height: clamp(380px, 55vh, 650px);
+.project-img {
+  height: clamp(200px, 50vh, 650px);
+  overflow: hidden;
 }
 
-.project-color-img img {
+.project-img img {
   display: block;
+  width: 100%;
   height: 100%;
-  width: auto;
-  max-width: none;
-  pointer-events: none;
+  object-fit: cover;
+  object-position: center top;
+  cursor: zoom-in;
 }
 
-.project-color-caption-tag {
+.project-caption-tag {
   font-size: clamp(0.7rem, 0.4vw + 0.4rem, 0.85rem);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -188,13 +198,64 @@
   line-height: 1;
 }
 
-.project-color-caption-name {
+.project-caption-name {
   font-size: clamp(1.1rem, 1vw + 0.6rem, 1.6rem);
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 1.1;
   margin-top: 0.3rem;
   color: #000;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ── Lightbox ───────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: clamp(1rem, 2vw, 1.5rem);
+  right: clamp(1rem, 2vw, 1.5rem);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.4rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.lightbox-close:hover {
+  color: #888;
 }
 
 /* ── Project Navigation ──────────────────────── */
@@ -205,12 +266,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 6rem;
-  padding-top: 2rem;
-  padding-bottom: clamp(4rem, 4vw, 6rem);
-  padding-left: 2rem;
-  padding-right: 2rem;
-  gap: 2rem;
+  margin-top: clamp(5rem, 6vw, 7rem);
+  padding-top: clamp(1.5rem, 2vw, 2rem);
+  padding-bottom: clamp(3rem, 4vw, 6rem);
+  padding-left: clamp(1.25rem, 2.5vw, 2rem);
+  padding-right: clamp(1.25rem, 2.5vw, 2rem);
+  gap: clamp(1rem, 2vw, 2rem);
 }
 
 .project-nav-link {
@@ -246,101 +307,14 @@
 
 .project-nav-link:hover .project-nav-name { color: #4f4f4f; }
 
+.project-intro::before,
+.project-gallery::before,
+.project-gallery::before {
+  border-top: none;
+}
+
 .project-nav::before {
-  left: 2rem;
-  right: 2rem;
+  left: clamp(1.25rem, 2.5vw, 2rem);
+  right: clamp(1.25rem, 2.5vw, 2rem);
 }
 
-/* ── Responsive ──────────────────────────────── */
-
-/* Tablet: Bild bleibt sichtbar, Text-Breite voll */
-@media (max-width: 1024px) {
-  .project-intro-left {
-    width: 100%;
-  }
-}
-
-/* Tablet + Mobile: 1 Spalte, Bild unter dem Text */
-@media (max-width: 768px) {
-  .project-intro-inner {
-    grid-template-columns: 1fr;
-    gap: 3.5rem;
-  }
-
-  .project-intro {
-    padding-top: 2rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .project-title {
-    margin-top: 0;
-  }
-
-  .project-meta-list {
-    gap: 0.25rem;
-  }
-
-  .project-link-btn {
-    font-size: 0.7rem;
-    padding: 0.4em 0.85em;
-  }
-
-  .project-color-img {
-    height: clamp(260px, 40vh, 480px);
-  }
-
-  .project-color-gallery {
-    padding-top: clamp(4rem, 8vw, 6rem);
-    padding-bottom: 1.5rem;
-  }
-
-  .project-nav {
-    margin-top: 3rem;
-    align-items: flex-start;
-  }
-}
-
-/* Small mobile */
-@media (max-width: 480px) {
-  .project-color-gallery .projects-grid {
-    gap: 1.25rem;
-  }
-
-  .project-color-img {
-    height: clamp(200px, 30vh, 320px);
-  }
-
-  .project-color-gallery {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-  }
-
-  .project-hero-image,
-  .project-gallery {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .project-hero-image img {
-    height: clamp(200px, 55vw, 400px);
-  }
-
-  .project-intro {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .project-nav {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .project-nav::before {
-    left: 1.25rem;
-    right: 1.25rem;
-  }
-
-  .project-nav-link {
-    max-width: 48%;
-  }
-}

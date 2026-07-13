@@ -43,7 +43,7 @@
       const remPx = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
       const gutterRem = window.innerWidth <= 480 ? 1.25 : 2;
       const gutter = remPx * gutterRem;
-      const docWidth = window.innerWidth;
+      const docWidth = document.documentElement.clientWidth;
 
       const lineLeft = headingText
         ? headingText.getBoundingClientRect().left
@@ -356,4 +356,67 @@
     images[nextIndex].classList.add("is-active");
     activeIndex = nextIndex;
   }, 1500);
+})();
+
+(function () {
+  const galleryImgs = document.querySelectorAll(".project-img img, .project-intro-image img");
+  if (!galleryImgs.length) return;
+
+  const overlay = document.createElement("div");
+  overlay.className = "lightbox";
+
+  const lightboxImg = document.createElement("img");
+  lightboxImg.className = "lightbox-img";
+  lightboxImg.alt = "";
+
+  const closeBtn = document.createElement("button");
+  closeBtn.className = "lightbox-close";
+  closeBtn.setAttribute("aria-label", "Schließen");
+  closeBtn.textContent = "✕";
+
+  overlay.append(closeBtn, lightboxImg);
+  document.body.append(overlay);
+
+  function open(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "";
+    overlay.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function close() {
+    overlay.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+
+  // Use pointerdown/pointerup instead of click because the slider calls
+  // setPointerCapture(), which redirects click events away from the image.
+  let tapImg = null;
+  let tapX = 0;
+  let tapY = 0;
+
+  document.addEventListener("pointerdown", (e) => {
+    const hit = e.composedPath().find(
+      (el) => el.matches && el.matches(".project-img img, .project-intro-image img")
+    );
+    tapImg = hit || null;
+    tapX = e.clientX;
+    tapY = e.clientY;
+  }, { capture: true, passive: true });
+
+  document.addEventListener("pointerup", (e) => {
+    if (!tapImg) return;
+    const dx = Math.abs(e.clientX - tapX);
+    const dy = Math.abs(e.clientY - tapY);
+    if (dx < 8 && dy < 8) open(tapImg.src, tapImg.alt);
+    tapImg = null;
+  }, { passive: true });
+
+  closeBtn.addEventListener("click", close);
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) close();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
 })();

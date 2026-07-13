@@ -1,0 +1,140 @@
+/* ═══════════════════════════════════════════════
+   PROJECT DETAIL PAGES — RESPONSIVE
+   Breakpoints:
+   Tablet  → max-width: 1024px
+   Mobile  → max-width: 768px
+   Small   → max-width: 480px
+═══════════════════════════════════════════════ */
+
+/* ── Tablet (≤ 1024px) ───────────────────────── */
+@media (max-width: 1024px) {
+  .project-intro-inner {
+    grid-template-columns: 1fr;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+  }
+
+  .project-intro-left {
+    width: 100%;
+  }
+
+  .project-title {
+    margin-top: 0;
+    font-size: clamp(1.8rem, 3.5vw + 0.5rem, 3.5rem);
+  }
+
+  .project-card {
+    width: clamp(400px, 70vw, 600px);
+  }
+
+  .project-img {
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+
+  .project-caption-name {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+  }
+
+  .project-nav {
+    margin-top: clamp(4rem, 5vw, 6rem);
+  }
+
+  .project-gallery {
+    margin: clamp(2rem, 5vw, 3rem) 0;
+  }
+}
+
+/* ── Mobile (≤ 768px) ────────────────────────── */
+@media (max-width: 768px) {
+  .project-intro-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .project-intro {
+    padding-top: clamp(1.25rem, 2.5vw, 2rem);
+  }
+
+  .project-title {
+    margin-top: 0;
+  }
+
+  .project-meta-list {
+    gap: 0.25rem;
+  }
+
+  .project-gallery {
+    margin: clamp(2rem, 5vw, 3rem) 0;
+  }
+
+  .project-card {
+    width: clamp(260px, 80vw, 420px);
+  }
+
+  .project-img {
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+
+  .project-caption-name {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+  }
+
+  .project-nav {
+    margin-top: clamp(4rem, 6vw, 5rem);
+    align-items: flex-start;
+  }
+
+  .project-nav-link {
+    max-width: 48%;
+  }
+}
+
+/* ── Small Mobile (≤ 480px) ──────────────────── */
+@media (max-width: 480px) {
+  .project-hero-image {
+    padding-top: clamp(4rem, 8vw, 6rem);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .project-intro {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .project-card {
+    width: 88vw;
+  }
+
+  .project-img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .project-caption-tag {
+    font-size: 0.7rem;
+  }
+
+  .project-caption-name {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+  }
+
+  .project-nav {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .project-nav-link,
+  .project-nav-link--next {
+    max-width: 100%;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .project-nav-name {
+    font-size: clamp(1.2rem, 6vw, 1.8rem);
+  }
+}
