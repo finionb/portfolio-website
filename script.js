@@ -359,8 +359,8 @@
 })();
 
 (function () {
-  const galleryImgs = document.querySelectorAll(".project-img img, .project-intro-image img");
-  if (!galleryImgs.length) return;
+  const mediaEls = document.querySelectorAll(".project-img img, .project-intro-image img, .project-intro-image video");
+  if (!mediaEls.length) return;
 
   const overlay = document.createElement("div");
   overlay.className = "lightbox";
@@ -369,17 +369,33 @@
   lightboxImg.className = "lightbox-img";
   lightboxImg.alt = "";
 
+  const lightboxVideo = document.createElement("video");
+  lightboxVideo.className = "lightbox-img";
+  lightboxVideo.loop = true;
+  lightboxVideo.playsInline = true;
+  lightboxVideo.controls = true;
+  lightboxVideo.style.display = "none";
+
   const closeBtn = document.createElement("button");
   closeBtn.className = "lightbox-close";
   closeBtn.setAttribute("aria-label", "Schließen");
   closeBtn.textContent = "✕";
 
-  overlay.append(closeBtn, lightboxImg);
+  overlay.append(closeBtn, lightboxImg, lightboxVideo);
   document.body.append(overlay);
 
-  function open(src, alt) {
-    lightboxImg.src = src;
-    lightboxImg.alt = alt || "";
+  function open(src, alt, isVideo) {
+    if (isVideo) {
+      lightboxImg.style.display = "none";
+      lightboxVideo.style.display = "block";
+      lightboxVideo.src = src;
+      lightboxVideo.play();
+    } else {
+      lightboxVideo.style.display = "none";
+      lightboxImg.style.display = "";
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || "";
+    }
     overlay.classList.add("is-open");
     document.body.style.overflow = "hidden";
   }
@@ -387,29 +403,31 @@
   function close() {
     overlay.classList.remove("is-open");
     document.body.style.overflow = "";
+    lightboxVideo.pause();
+    lightboxVideo.src = "";
   }
 
   // Use pointerdown/pointerup instead of click because the slider calls
   // setPointerCapture(), which redirects click events away from the image.
-  let tapImg = null;
+  let tapEl = null;
   let tapX = 0;
   let tapY = 0;
 
   document.addEventListener("pointerdown", (e) => {
     const hit = e.composedPath().find(
-      (el) => el.matches && el.matches(".project-img img, .project-intro-image img")
+      (el) => el.matches && el.matches(".project-img img, .project-intro-image img, .project-intro-image video")
     );
-    tapImg = hit || null;
+    tapEl = hit || null;
     tapX = e.clientX;
     tapY = e.clientY;
   }, { capture: true, passive: true });
 
   document.addEventListener("pointerup", (e) => {
-    if (!tapImg) return;
+    if (!tapEl) return;
     const dx = Math.abs(e.clientX - tapX);
     const dy = Math.abs(e.clientY - tapY);
-    if (dx < 8 && dy < 8) open(tapImg.src, tapImg.alt);
-    tapImg = null;
+    if (dx < 8 && dy < 8) open(tapEl.src, tapEl.alt, tapEl.tagName === "VIDEO");
+    tapEl = null;
   }, { passive: true });
 
   closeBtn.addEventListener("click", close);
