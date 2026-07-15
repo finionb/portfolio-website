@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ececec" />
-    <title>Pia's Adventures – Portfolio</title>
+    <title>Projekt - GeoKnack</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../responsive.css" />
     <link rel="stylesheet" href="projects.css" />
     <link rel="stylesheet" href="projects-responsive.css" />
+    <link rel="preload" as="image" href="../images/GeoKnack/MockUp_GeoKnack.png" />
   </head>
   <body>
   <div class="page-wrapper">
@@ -31,16 +32,16 @@
 
     <main>
       <div class="project-hero-image">
-        <img src="../images/Pias_adventures_MockUp.png" alt="Pia's Adventures Mockup" />
+        <img src="../images/GeoKnack/MockUp_GeoKnack.png" alt="GeoKnack Mockup" fetchpriority="high" />
       </div>
 
       <section class="section project-intro">
         <div class="project-intro-inner">
           <div class="project-intro-left">
-            <h1 class="project-title">Pia's Adventures</h1>
+            <h1 class="project-title">GeoKnack</h1>
             <div class="project-meta-list">
-              <p class="project-meta-item"><span class="project-meta-label">Rolle</span> Konzept, UI/UX Design, Visual Branding, Frontend</p>
-              <p class="project-meta-item"><span class="project-meta-label">Tools</span> Figma, Canva, TypeScript, HTML, SCSS, GitHub</p>
+              <p class="project-meta-item"><span class="project-meta-label">Rolle</span> UI/UX Design, Frontend</p>
+              <p class="project-meta-item"><span class="project-meta-label">Tools</span> AdobeXD, XCode, Swift, iOS Game Center</p>
             </div>
             <p class="project-description">
               GeoKnack entstand im Rahmen eines Hochschulprojekts, bei dem wir eine iOS-App von der ersten Idee
@@ -58,15 +59,16 @@
               entwickelte ich das Frontend für den Account-, Login- und Home-Bereich sowie die Anbindung des
               Login-Prozesses an das Apple Game Center.
             </p>
+            <!--
             <a href="https://pias-adventures.de/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
               Zu Pia's Adventures <span class="project-link-arrow">↗</span>
-            </a>
+            </a>-->
           </div>
           <div class="project-intro-image">
-            <img src="../images/Pias_Adventures_Brand_Identity.png" alt="Pia's Adventures Brand Identity Kit" />
+            <video src="../images/GeoKnack/GeoKnack_UserFlow.mp4" autoplay loop muted playsinline></video>
             <div class="project-caption">
-              <p class="project-caption-tag">Visual Branding</p>
-              <p class="project-caption-name">Brand Identity Kit</p>
+              <p class="project-caption-tag">Basic Userflow ohne Verknüpfung zum iOS Game Center</p>
+              <p class="project-caption-name">Prototyp Userflow</p>
             </div>
           </div>
         </div>
@@ -78,56 +80,47 @@
           <div class="projects-grid">
             <div class="project-card">
               <div class="project-img">
-                <img src="../images/Pias_Adventures_FirstDesign.png" alt="Pia's Adventures Mobile Startseite" />
+                <img src="../images/GeoKnack/Login.png" alt="Login-Bereich" loading="lazy" decoding="async" />
               </div>
               <div class="project-caption">
-                <p class="project-caption-tag">Responsive Version noch nicht vorhanden</p>
-                <p class="project-caption-name">Ursprüngliche Startseite der Website</p>
+                <p class="project-caption-tag">Verknüpfung zum iOS Game Center</p>
+                <p class="project-caption-name">Login-Bereich</p>
               </div>
             </div>
             <div class="project-card">
               <div class="project-img">
-                <img src="../images/Pias_Adventures_FirstDesignBlogs.png" alt="Pia's Adventures Mobile Startseite" />
+                <img src="../images/GeoKnack/Hauptmenü.png" alt="Hauptmenü" loading="lazy" decoding="async" />
               </div>
               <div class="project-caption">
-                <p class="project-caption-tag">Mit personalisierbaren Blog-Covern</p>
-                <p class="project-caption-name">Ursprüngliche Blog-Ansicht der Website</p>
+                <p class="project-caption-tag">Enthält Spielmodi und Account-Button</p>
+                <p class="project-caption-name">Hauptmenü</p>
               </div>
             </div>
             <div class="project-card">
               <div class="project-img">
-                <img src="../images/Pias_Adventures_Header.png" alt="Pia's Adventures Über mich" />
+                <img src="../images/GeoKnack/Profil.png" alt="Profil" loading="lazy" decoding="async" />
               </div>
               <div class="project-caption">
-                <p class="project-caption-tag">Neues Layout, Logo und Farbkonzept</p>
-                <p class="project-caption-name">Neue Startseite inkl. neuem Branding</p>
+                <p class="project-caption-tag">Enthält Freundesliste, Achievements und Leaderboard</p>
+                <p class="project-caption-name">Profil</p>
               </div>
             </div>
             <div class="project-card">
               <div class="project-img">
-                <img src="../images/Pias_Adventures_About.png" alt="Pia's Adventures Mobile Blog" />
+                <img src="../images/GeoKnack/Spielverlauf.png" alt="Spielverlauf" loading="lazy" decoding="async" />
               </div>
               <div class="project-caption">
-                <p class="project-caption-tag">Neu hinzugefügt, für mehr Persönlichkeit</p>
-                <p class="project-caption-name">Persönlicher About-Abschnitt</p>
+                <p class="project-caption-tag">Verknüpfung zu Google Street View</p>
+                <p class="project-caption-name">Spielverlauf</p>
               </div>
             </div>
             <div class="project-card">
               <div class="project-img">
-                <img src="../images/Pias_Adventures_Image.png" alt="Pia's Adventures Mobile Beitrag" />
+                <img src="../images/GeoKnack/Ergebnis.png" alt="Ergebnis" loading="lazy" decoding="async" />
               </div>
               <div class="project-caption">
-                <p class="project-caption-tag">Zwischenabschnitt für einen schöneren Übergang zur Blog-Ansicht</p>
-                <p class="project-caption-name">Statisches Bild und Blog-Teaser</p>
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="project-img">
-                <img src="../images/Pias_Adventures_Blog.png" alt="Pia's Adventures Mobile Beitrag" />
-              </div>
-              <div class="project-caption">
-                <p class="project-caption-tag">Angepasstes Layout an die restliche Website</p>
-                <p class="project-caption-name">Blog-Ansicht</p>
+                <p class="project-caption-tag">Berechnung des Scores und Siegeranimation</p>
+                <p class="project-caption-name">Spielergebnis</p>
               </div>
             </div>
         </div>
@@ -138,10 +131,11 @@
           <span class="project-nav-dir">← Vorheriges Projekt</span>
           <span class="project-nav-name">Dark Patterns</span>
         </a>
+        <!--
         <a class="project-nav-link project-nav-link--next" href="social-media-handball.html">
           <span class="project-nav-dir">Nächstes Projekt →</span>
           <span class="project-nav-name">TSG Handball</span>
-        </a>
+        </a>-->
       </nav>
     </main>
   </div>

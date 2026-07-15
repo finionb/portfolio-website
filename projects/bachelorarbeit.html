@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ececec" />
-    <title>Pia's Adventures – Portfolio</title>
+    <title>Projekt - Bachelorarbeit</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../responsive.css" />
     <link rel="stylesheet" href="projects.css" />
     <link rel="stylesheet" href="projects-responsive.css" />
+    <link rel="preload" as="image" href="../images/Bachelorarbeit/Bachelorarbeit_MockUp.png" />
   </head>
   <body>
   <div class="page-wrapper">
@@ -31,16 +32,16 @@
 
     <main>
       <div class="project-hero-image">
-        <img src="../images/Pias_adventures_MockUp.png" alt="Pia's Adventures Mockup" />
+        <img src="../images/Bachelorarbeit/Bachelorarbeit_MockUp.png" alt="Bachelorarbeit Prototyp Mockup" fetchpriority="high" />
       </div>
 
       <section class="section project-intro">
         <div class="project-intro-inner">
           <div class="project-intro-left">
-            <h1 class="project-title">Pia's Adventures</h1>
+            <h1 class="project-title">Dark Patterns</h1>
             <div class="project-meta-list">
-              <p class="project-meta-item"><span class="project-meta-label">Rolle</span> Konzept, UI/UX Design, Visual Branding, Frontend</p>
-              <p class="project-meta-item"><span class="project-meta-label">Tools</span> Figma, Canva, TypeScript, HTML, SCSS, GitHub</p>
+              <p class="project-meta-item"><span class="project-meta-label">Rolle</span> Research, UI/UX Design</p>
+              <p class="project-meta-item"><span class="project-meta-label">Tools</span> Figma</p>
             </div>
             <p class="project-description">
               Im Rahmen meiner Bachelorarbeit beschäftigte ich mich mit der Analyse manipulativer 
@@ -59,15 +60,16 @@
               dass Dark Patterns Entscheidungen beeinflussen können und sich negativ auf zentrale Aspekte 
               der User Experience wie Vertrauen, wahrgenommene Kontrolle und Zufriedenheit auswirken.
             </p>
+            <!--
             <a href="https://pias-adventures.de/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
               Zu Pia's Adventures <span class="project-link-arrow">↗</span>
-            </a>
+            </a>-->
           </div>
           <div class="project-intro-image">
-            <img src="../images/Pias_Adventures_Brand_Identity.png" alt="Pia's Adventures Brand Identity Kit" />
+            <video src="../images/Bachelorarbeit/Bachelorarbeit_Userflow.mp4" autoplay loop muted playsinline></video>
             <div class="project-caption">
-              <p class="project-caption-tag">Visual Branding</p>
-              <p class="project-caption-name">Brand Identity Kit</p>
+              <p class="project-caption-tag">Dark Pattern Variante</p>
+              <p class="project-caption-name">Onlineshop Userflow</p>
             </div>
           </div>
         </div>
@@ -79,56 +81,38 @@
           <div class="projects-grid">
             <div class="project-card">
               <div class="project-img">
-                <img src="../images/Pias_Adventures_FirstDesign.png" alt="Pia's Adventures Mobile Startseite" />
+                <img src="../images/Bachelorarbeit/PressuredSelling.png" alt="Pressured Selling Mockup" loading="lazy" decoding="async" />
               </div>
               <div class="project-caption">
-                <p class="project-caption-tag">Responsive Version noch nicht vorhanden</p>
-                <p class="project-caption-name">Ursprüngliche Startseite der Website</p>
+                <p class="project-caption-tag">Teuerste Produktvariante vorausgewählt und visuelle Hervorhebung</p>
+                <p class="project-caption-name">Pressured Selling</p>
               </div>
             </div>
             <div class="project-card">
               <div class="project-img">
-                <img src="../images/Pias_Adventures_FirstDesignBlogs.png" alt="Pia's Adventures Mobile Startseite" />
+                <img src="../images/Bachelorarbeit/Confirmshaming.png" alt="Confirmshaming Mockup" loading="lazy" decoding="async" />
               </div>
               <div class="project-caption">
-                <p class="project-caption-tag">Mit personalisierbaren Blog-Covern</p>
-                <p class="project-caption-name">Ursprüngliche Blog-Ansicht der Website</p>
+                <p class="project-caption-tag">Ablehnende Option emotionalisiert und weniger visuell hervorgehoben</p>
+                <p class="project-caption-name">Confirmshaming</p>
               </div>
             </div>
             <div class="project-card">
               <div class="project-img">
-                <img src="../images/Pias_Adventures_Header.png" alt="Pia's Adventures Über mich" />
+                <img src="../images/Bachelorarbeit/Bezahlung.png" alt="Sneak into Basket und Privacy Zuckering Mockup" loading="lazy" decoding="async" />
               </div>
               <div class="project-caption">
-                <p class="project-caption-tag">Neues Layout, Logo und Farbkonzept</p>
-                <p class="project-caption-name">Neue Startseite inkl. neuem Branding</p>
+                <p class="project-caption-tag">Verstecktes Zusatzprodukt in der Bestellung und automatische Newsletter-Zustimmung</p>
+                <p class="project-caption-name">Sneak into Basket und Privacy Zuckering</p>
               </div>
             </div>
             <div class="project-card">
               <div class="project-img">
-                <img src="../images/Pias_Adventures_About.png" alt="Pia's Adventures Mobile Blog" />
+                <img src="../images/Bachelorarbeit/HardToCancel.png" alt="Privacy Mazes Mockup" loading="lazy" decoding="async" />
               </div>
               <div class="project-caption">
-                <p class="project-caption-tag">Neu hinzugefügt, für mehr Persönlichkeit</p>
-                <p class="project-caption-name">Persönlicher About-Abschnitt</p>
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="project-img">
-                <img src="../images/Pias_Adventures_Image.png" alt="Pia's Adventures Mobile Beitrag" />
-              </div>
-              <div class="project-caption">
-                <p class="project-caption-tag">Zwischenabschnitt für einen schöneren Übergang zur Blog-Ansicht</p>
-                <p class="project-caption-name">Statisches Bild und Blog-Teaser</p>
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="project-img">
-                <img src="../images/Pias_Adventures_Blog.png" alt="Pia's Adventures Mobile Beitrag" />
-              </div>
-              <div class="project-caption">
-                <p class="project-caption-tag">Angepasstes Layout an die restliche Website</p>
-                <p class="project-caption-name">Blog-Ansicht</p>
+                <p class="project-caption-tag">Dreistufiger Abmeldungsprozess vom Newsletter</p>
+                <p class="project-caption-name">Privacy Mazes</p>
               </div>
             </div>
         </div>
