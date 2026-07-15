@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ececec" />
+    <title>Galerie – Finja Bormann</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="galerie.css" />
+  </head>
+  <body>
+  <div class="page-wrapper">
+
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">FINJA BORMANN</a>
+        <button class="nav-burger" aria-label="Menü öffnen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="projects-overview.html">Projekte</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="section ga-hero no-line">
+        <div class="ga-hero-inner">
+          <h1 class="ga-title">Galerie</h1>
+          <p class="ga-desc">Ausgewählte Arbeiten aus den Bereichen Poster Design, Typografie und Print.</p>
+        </div>
+      </section>
+
+      <section class="section ga-main no-line">
+
+        <div class="ga-filters">
+          <button class="ga-filter is-active" data-filter="all">Alle</button>
+          <button class="ga-filter" data-filter="poster">Poster</button>
+          <button class="ga-filter" data-filter="typografie">Typografie</button>
+        </div>
+
+        <div class="ga-grid">
+
+          <div class="ga-card" data-categories="poster">
+            <div class="ga-card-img">
+              <img src="images/Galerie/997-poster.png" alt="997 Poster" loading="lazy" decoding="async" />
+            </div>
+            <div class="ga-card-body">
+              <p class="ga-card-tags">Poster</p>
+              <h3 class="ga-card-title">997</h3>
+            </div>
+          </div>
+
+          <div class="ga-card" data-categories="poster typografie">
+            <div class="ga-card-img">
+              <img src="images/Galerie/bubble-font-poster.png" alt="Bubble Font Poster" loading="lazy" decoding="async" />
+            </div>
+            <div class="ga-card-body">
+              <p class="ga-card-tags">Poster, Typografie</p>
+              <h3 class="ga-card-title">Bubble Font</h3>
+            </div>
+          </div>
+
+          <div class="ga-card" data-categories="poster">
+            <div class="ga-card-img">
+              <img src="images/Galerie/anti-design-poster.png" alt="Anti-Design Poster" loading="lazy" decoding="async" />
+            </div>
+            <div class="ga-card-body">
+              <p class="ga-card-tags">Poster</p>
+              <h3 class="ga-card-title">Anti-Design</h3>
+            </div>
+          </div>
+
+          <div class="ga-card" data-categories="poster">
+            <div class="ga-card-img">
+              <img src="images/Galerie/retro-poster.png" alt="Retro Poster" loading="lazy" decoding="async" />
+            </div>
+            <div class="ga-card-body">
+              <p class="ga-card-tags">Poster</p>
+              <h3 class="ga-card-title">Retro</h3>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-cta">Lets work<br class="footer-br"> together</p>
+      <div class="footer-links-row">
+        <a class="footer-link" href="mailto:finjabormann03@gmail.com">finjabormann03@gmail.com</a>
+        <div class="footer-social">
+          <a class="footer-link" href="https://de.linkedin.com/in/finja-bormann-8b305a2b4" target="_blank">LinkedIn</a>
+          <a class="footer-link" href="https://github.com/finionb" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Finja Bormann</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      const filters = document.querySelectorAll('.ga-filter');
+      const cards = document.querySelectorAll('.ga-card');
+
+      filters.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filters.forEach(function (f) { f.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+
+          const active = btn.dataset.filter;
+          cards.forEach(function (card) {
+            if (active === 'all') {
+              card.classList.remove('is-hidden');
+            } else {
+              const cats = (card.dataset.categories || '').split(' ');
+              card.classList.toggle('is-hidden', !cats.includes(active));
+            }
+          });
+        });
+      });
+    })();
+  </script>
+  </body>
+</html>

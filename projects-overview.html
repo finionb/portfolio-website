@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ececec" />
+    <title>Projekte – Finja Bormann</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="projects-overview.css" />
+  </head>
+  <body>
+  <div class="page-wrapper">
+
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">FINJA BORMANN</a>
+        <button class="nav-burger" aria-label="Menü öffnen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="projects-overview.html">Projekte</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="section po-hero no-line">
+        <div class="po-hero-inner">
+          <h1 class="po-title">Projekte</h1>
+          <p class="po-desc">Ausgewählte Arbeiten aus den Bereichen UI/UX Design, Branding und Frontend-Entwicklung.</p>
+        </div>
+      </section>
+
+      <section class="section po-main no-line">
+
+        <div class="po-filters">
+          <button class="po-filter is-active" data-filter="all">Alle</button>
+          <button class="po-filter" data-filter="ui-ux">UI/UX Design</button>
+          <button class="po-filter" data-filter="branding">Branding</button>
+          <button class="po-filter" data-filter="frontend">Frontend</button>
+          <button class="po-filter" data-filter="research">Research</button>
+        </div>
+
+        <div class="po-grid">
+
+          <a class="po-card" href="projects/pias-adventures.html" data-categories="ui-ux branding frontend">
+            <div class="po-card-img">
+              <img src="images/Pias_Adventures/Pias_Adventures_MockUp.png" alt="Pia's Adventures" fetchpriority="high" />
+
+            </div>
+            <div class="po-card-body">
+              <p class="po-card-tags">UI/UX Design, Branding, Frontend</p>
+              <h3 class="po-card-title">Pia's Adventures</h3>
+              <p class="po-card-desc">Eine personalisierte Website für Reise-Blogs</p>
+            </div>
+          </a>
+
+          <a class="po-card" href="projects/handball-app.html" data-categories="ui-ux">
+            <div class="po-card-img">
+              <img src="images/TSG/Handball_App.png" alt="TSG Hatten-Sandkrug App" loading="lazy" decoding="async" />
+
+            </div>
+            <div class="po-card-body">
+              <p class="po-card-tags">UI/UX Design, App</p>
+              <h3 class="po-card-title">TSG Hatten-Sandkrug</h3>
+              <p class="po-card-desc">Eine Handball-App zur Organisation von Vereinsnews und Spielen</p>
+            </div>
+          </a>
+
+          <a class="po-card" href="projects/bachelorarbeit.html" data-categories="ui-ux research">
+            <div class="po-card-img">
+              <img src="images/Bachelorarbeit/Bachelorarbeit_MockUp.png" alt="Dark Patterns" loading="lazy" decoding="async" />
+
+            </div>
+            <div class="po-card-body">
+              <p class="po-card-tags">Research, UI/UX Design</p>
+              <h3 class="po-card-title">Dark Patterns</h3>
+              <p class="po-card-desc">Meine Bachelorarbeit im Bereich Medieninformatik</p>
+            </div>
+          </a>
+
+          <a class="po-card" href="projects/geoknack.html" data-categories="ui-ux frontend">
+            <div class="po-card-img">
+              <img src="images/GeoKnack/MockUp_GeoKnack.png" alt="GeoKnack" loading="lazy" decoding="async" />
+
+            </div>
+            <div class="po-card-body">
+              <p class="po-card-tags">UI/UX Design, Frontend</p>
+              <h3 class="po-card-title">GeoKnack</h3>
+              <p class="po-card-desc">Ein Mobile-Spiel rund um Geografie</p>
+            </div>
+          </a>
+
+          <a class="po-card po-card--soon" href="projects/social-media-handball.html" data-categories="branding">
+            <div class="po-card-img">
+              <img src="images/ComingSoon.png" alt="TSG Handball Social Media" loading="lazy" decoding="async" />
+
+              <span class="po-soon-badge">Coming Soon</span>
+            </div>
+            <div class="po-card-body">
+              <p class="po-card-tags">Branding, Social Media</p>
+              <h3 class="po-card-title">TSG Hatten-Sandkrug</h3>
+              <p class="po-card-desc">Konzeption und Gestaltung des Social-Media-Auftritts eines Handballvereins</p>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-cta">Lets work<br class="footer-br"> together</p>
+      <div class="footer-links-row">
+        <a class="footer-link" href="mailto:finjabormann03@gmail.com">finjabormann03@gmail.com</a>
+        <div class="footer-social">
+          <a class="footer-link" href="https://de.linkedin.com/in/finja-bormann-8b305a2b4" target="_blank">LinkedIn</a>
+          <a class="footer-link" href="https://github.com/finionb" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Finja Bormann</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      const filters = document.querySelectorAll('.po-filter');
+      const cards = document.querySelectorAll('.po-card');
+
+      filters.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filters.forEach(function (f) { f.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+
+          const active = btn.dataset.filter;
+          cards.forEach(function (card) {
+            if (active === 'all') {
+              card.classList.remove('is-hidden');
+            } else {
+              const cats = (card.dataset.categories || '').split(' ');
+              card.classList.toggle('is-hidden', !cats.includes(active));
+            }
+          });
+        });
+      });
+    })();
+  </script>
+  </body>
+</html>

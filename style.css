@@ -198,6 +198,11 @@ body {
   margin: 0 auto;
 }
 
+#projects,
+#gallery {
+  padding-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
 .section::before {
   content: "";
   position: absolute;
@@ -289,6 +294,44 @@ body {
   .projects-static-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ── Section Link Button ─────────────────────────────── */
+.section-link-wrap {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  margin-top: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.section-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.55em 1.1em;
+  border: 1px solid #000;
+  border-radius: 9999px;
+  background: transparent;
+  color: #000;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.7rem, 0.35vw + 0.5rem, 0.9rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.section-link-btn:hover {
+  color: #4f4f4f;
+  border-color: #4f4f4f;
+}
+
+.section-link-arrow {
+  font-size: 1.2em;
+  line-height: 1;
 }
 
 .coming-soon-card {

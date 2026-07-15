@@ -152,6 +152,11 @@
     gap: 2rem;
   }
 
+  /* ─ Section Link ─ */
+  .section-link-wrap {
+    padding-right: 1.25rem;
+  }
+
   /* ─ Footer ─ */
   .footer {
     padding: clamp(4rem, 10vw, 6rem) 1.25rem;
