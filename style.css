@@ -14,8 +14,7 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  background-color: #111;
-  /* padding-bottom is set dynamically in JS to match footer height */
+  background-color: #ececec;
 }
 
 
@@ -303,7 +302,7 @@ body {
   display: flex;
   justify-content: flex-end;
   padding-right: 2rem;
-  margin-top: clamp(1.25rem, 2.5vw, 2rem);
+  margin-top: clamp(0.4rem, 0.8vw, 0.65rem);
 }
 
 .section-link-btn {
@@ -489,19 +488,11 @@ h2 {
 }
 
 /* Footer */
-/* Page wrapper scrolls over fixed footer */
 .page-wrapper {
-  position: relative;
-  z-index: 1;
   background-color: #ececec;
-  min-height: 100vh;
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-color: #111;
   display: flex;
   flex-direction: column;
@@ -510,16 +501,12 @@ h2 {
   padding: clamp(3rem, 7vw, 6rem) 2rem;
 }
 
-.footer * {
-  background-color: transparent;
-}
-
 .footer-inner {
   max-width: 1140px;
   width: 100%;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.7s ease;
 }
 
 .footer-inner.is-visible {
