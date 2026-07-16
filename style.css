@@ -530,7 +530,7 @@ h2 {
   display: none;
 }
 
-.footer-cta {
+.footer-work-together {
   font-size: clamp(2rem, 3.5vw + 1rem, 5rem);
   font-weight: 700;
   color: #ececec;
