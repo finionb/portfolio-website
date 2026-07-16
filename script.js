@@ -325,8 +325,8 @@
 })();
 
 (function () {
-  const mediaEls = document.querySelectorAll(".project-img img, .project-intro-image img, .project-intro-image video");
-  if (!mediaEls.length) return;
+  const LIGHTBOX_SEL = ".project-img img, .project-intro-image img, .project-intro-image video, .ga-card-img img, #gallery .project-image img";
+  if (!document.querySelector(LIGHTBOX_SEL)) return;
 
   const overlay = document.createElement("div");
   overlay.className = "lightbox";
@@ -381,7 +381,7 @@
 
   document.addEventListener("pointerdown", (e) => {
     const hit = e.composedPath().find(
-      (el) => el.matches && el.matches(".project-img img, .project-intro-image img, .project-intro-image video")
+      (el) => el.matches && el.matches(LIGHTBOX_SEL)
     );
     tapEl = hit || null;
     tapX = e.clientX;

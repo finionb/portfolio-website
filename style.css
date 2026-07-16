@@ -269,6 +269,7 @@ body {
 #gallery .project-card {
   flex: 0 0 clamp(220px, 35vw, 500px);
   width: clamp(220px, 35vw, 500px);
+  cursor: zoom-in;
 }
 
 /* Static projects grid (no slider) */
@@ -408,7 +409,7 @@ h2 {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   padding-left: 2rem;
-  font-size: clamp(2rem, 3.5vw + 1rem, 5rem);
+  font-size: clamp(2.5rem, 7vw + 0.5rem, 8rem);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -517,16 +518,6 @@ h2 {
   display: none;
 }
 
-.footer-work-together {
-  font-size: clamp(2rem, 3.5vw + 1rem, 5rem);
-  font-weight: 700;
-  color: #ececec;
-  text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: -0.01em;
-  margin-bottom: clamp(1.5rem, 3vw, 3rem);
-}
-
 .footer-links-row {
   display: flex;
   justify-content: center;
@@ -560,4 +551,51 @@ h2 {
   font-size: clamp(0.65rem, 0.3vw + 0.4rem, 0.75rem);
 }
 
+/* ── Lightbox ────────────────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
 
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: clamp(1rem, 2vw, 1.5rem);
+  right: clamp(1rem, 2vw, 1.5rem);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.4rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.lightbox-close:hover {
+  color: #888;
+}
